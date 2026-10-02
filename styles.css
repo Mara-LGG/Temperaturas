@@ -1,0 +1,19 @@
+.container {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../img/temperatura.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.p{
+    color: rgb(189, 57, 112);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
