@@ -1,33 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="./styles.css">
-    <title>Temperaturas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title class="p">Conversor de Temperaturas</title>
 </head>
 
-<body class="container">
- 
-    <p class="p">Ingresa la tempertura en grados Celsius para convertirla en Faherenheit y Kelvin:</p>
-    <div class="input-group mb-3">
-        <input id="celsiusInput" type="number" class="form-control" placeholder="Recipient’s celsius" aria-label="Recipient’s celsius"
-            aria-describedby="button-addon2">
-        <button id = "btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Convertir</button>
-    </div>
+<body>
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Resultados</h5>
-            <p class="card-text">Fahrenheit: <span id="fahrenheitResultado"></span></p>
-            <p class="card-text">Kelvin: <span id="kelvinResultado"></span></p>
-        </div>
+    <main class="container">
+        <header class="text-center mb-5">
+            <h1 class="p">Conversor de Temperaturas</h1>
+
+            <p class="p">
+                Ingresa una temperatura en grados Celsius para convertirla
+                a Fahrenheit y Kelvin.
+            </p>
+        </header>
+
+        <section class="row justify-content-center mb-5">
+
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-body">
+
+                        <h2 class="card-title text-center mb-4">
+                            Convertir temperatura
+                        </h2>
+
+                        <div class="input-group mb-4">
+
+                            <input
+                                id="celsiusInput"
+                                type="number"
+                                class="form-control"
+                                placeholder="Ingresa grados Celsius"
+                                aria-label="Temperatura en grados Celsius"
+                            >
+
+                            <button
+                                id="btn"
+                                class="btn btn-primary"
+                                type="button"
+                            >
+                                Convertir
+                            </button>
+
+                        </div>
 
 
-    <script src="JS/temperaturas.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                        <div class="alert alert-light border">
+
+                            <h3 class="h5">Resultados</h3>
+
+                            <p class="mb-2">
+                                Fahrenheit:
+                                <strong>
+                                    <span id="fahrenheitResultado">--</span>
+                                </strong>
+                            </p>
+
+                            <p class="mb-0">
+                                Kelvin:
+                                <strong>
+                                    <span id="kelvinResultado">--</span>
+                                </strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2 class="text-center mb-4">
+                Escalas de temperatura
+            </h2>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img
+                            src="./img/celsius.png"
+                            class="card-img-top"
+                            alt="Escala de temperatura Celsius"
+                        >
+
+                        <div class="card-body">
+
+                            <h3 class="card-title h5">
+                                Celsius
+                            </h3>
+
+                            <p class="card-text">
+                                Creada por Anders Celsius en 1742.
+                                Divide el intervalo entre la congelación y
+                                la ebullición del agua en 100 partes iguales.
+                            </p>
+
+                            <ul>
+                                <li>Congelación: 0 °C</li>
+                                <li>Ebullición: 100 °C</li>
+                                <li>Uso común en la mayoría de los países</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img
+                            src="./img/fahrenheit.png"
+                            class="card-img-top"
+                            alt="Escala de temperatura Fahrenheit"
+                        >
+
+                        <div class="card-body">
+
+                            <h3 class="card-title h5">
+                                Fahrenheit
+                            </h3>
+
+                            <p class="card-text">
+                                Creada por Daniel Gabriel Fahrenheit en 1724.
+                                Divide el intervalo entre la congelación y
+                                la ebullición del agua en 180 partes.
+                            </p>
+
+                            <ul>
+                                <li>Congelación: 32 °F</li>
+                                <li>Ebullición: 212 °F</li>
+                                <li>Principalmente utilizada en Estados Unidos</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img
+                            src="./img/kelvin.png"
+                            class="card-img-top"
+                            alt="Escala de temperatura Kelvin"
+                        >
+
+                        <div class="card-body">
+
+                            <h3 class="card-title h5">
+                                Kelvin
+                            </h3>
+
+                            <p class="card-text">
+                                Creada por William Thomson, conocido como
+                                Lord Kelvin, en 1848. Está basada en el
+                                concepto del cero absoluto.
+                            </p>
+
+                            <ul>
+                                <li>Cero absoluto: 0 K</li>
+                                <li>Equivale a -273.15 °C</li>
+                                <li>Utilizada en ciencias físicas y químicas</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    
+    <script src="./JS/temperaturas.js"></script>
+
+   
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
